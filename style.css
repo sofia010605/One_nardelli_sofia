@@ -1,0 +1,471 @@
+/* DEFINIZIONE VARIABILI COLORE */
+:root{--color-primary: #584738; --color-accent: #E8D1A7; --color-text-light: #fff; --font-family-playfair: 'Playfair Display', serif; scroll-padding-top: 70px;}
+
+
+/** STILI GENERALI E FONT **/
+
+body {
+    font-family: var(--font-family-playfair); 
+    color: var(--color-primary); 
+    line-height: 1.6; 
+    margin: 0;
+    /* NUOVO: Padding per lasciare spazio al menu fisso (circa 70px) */
+    padding-top: 4.5rem; 
+}
+
+h1, h2, h3, h4 {font-weight: 700;}
+
+/* Utilità di spaziatura */
+.section-padding {padding-top: 6rem; padding-bottom: 6rem;}
+
+/* Stile per i titoli nelle sezioni chiare */
+.section-title {font-size: 2.5rem; margin-bottom: 2rem; color: var(--color-primary);}
+
+.section-title-dark {font-size: 2.5rem; margin-bottom: 2rem; color: var(--color-primary);}
+
+.bg-primary-color {background-color: var(--color-primary) !important;}
+
+.bg-accent-color {background-color: var(--color-accent) !important;}
+
+
+/* HEADER E NAVIGAZIONE (SEZIONE HERO) */
+
+.hero-section {
+    background-image: url('fotosfondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: #E8D1A7;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+.hero-content-centrato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%; 
+    width: 100%;
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+}
+
+.hero-slogan{
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    font-style: italic;
+}
+.hero-overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);}
+
+.full-height {height: 100%; display: flex; flex-direction: column;}
+
+.header-nav {margin-bottom: auto; width: 100%;}
+
+
+/* NUOVO STILE: Sfondo beige per la barra di navigazione, ora FISSA */
+.nav-bg {
+    background-color: var(--color-accent); 
+    padding: 1rem 0; 
+    width: 100%;
+    /* MODIFICA: Rende la barra fissa in cima allo schermo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Assicura che sia sopra gli altri contenuti */
+}
+.nav-bg .logo {font-size: 2rem; font-weight: bold; color: var(--color-primary);}
+.nav-bg .main-nav .nav-link {color: var(--color-primary); border-bottom-color: transparent;}
+.nav-bg .main-nav .nav-link:hover {color: var(--color-primary); border-bottom-color: var(--color-primary);}
+
+
+.hero-content {flex-grow: 1; display: flex; align-items: center; margin-bottom: 10%;}
+
+.logo {font-size: 1.8rem; font-weight: 400; margin: 0;}
+
+.main-nav .nav-link {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    padding: 0 0 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+/* INTERAZIONE MENU: Cambio colore (Beige) e Sottolineatura */
+.main-nav .nav-link:hover {color: var(--color-accent); border-bottom: 2px solid var(--color-accent);}
+
+/* Rende la riga di contenuto centrata verticalmente */
+.about-content {min-height: 400px;}
+
+/* *** Rende il testo chiaro quando lo sfondo è Marrone *** */
+#about.bg-primary-color * {
+    color: var(--color-text-light) !important;
+}
+
+.profile-img {
+    width: 550px;
+    height: 400px;    
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block; 
+    margin-left: 50px; 
+}
+
+.about-content .text-col {
+    padding-left: 2rem; 
+}
+
+.about-content h4 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: -10px;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+  margin-bottom: 0;
+  max-width: 550px;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #F1EADA;
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 550px;
+}
+
+/* NUOVI STILI PER SEZIONI INTERMEDIE */
+/* Stile per il titolo all'interno della sezione scura/chiara */
+.section-title-dark {
+    font-size: 2.5rem; 
+    margin-bottom: 2rem; 
+    color: var(--color-primary); /* Colore primario (scuro) sul fondo accent (beige) */
+}
+
+/* Utilità di colore (Se non le hai già definite) */
+.bg-primary-color {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-accent-color {
+    background-color: var(--color-accent) !important;
+}
+
+/* Stile per un'immagine intermedia di dimensioni 1000x400 */
+.img-intermedia {
+    max-width: 1000px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* STILI PER L'IMMAGINE GRANDE (1360x600) */
+.img-intermedia-grande {
+    width: 1360px;
+    max-width: 100%; /* Si adatta allo schermo se lo schermo è minore di 1360px */
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0; 
+}
+
+/** SEZIONE CONTATTI **/
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {background-color: var(--color-accent); color: var(--color-primary);}
+
+/* GALLERIA SANSEPOLCRO */
+.section-title-dark{
+    margin-bottom: 0.3;
+    margin-top: 0;
+}
+.sansepolcro-item {
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 0;
+    margin-top: 0;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    border-radius: 8px;
+}
+.sansepolcro-item img {border-radius: 8px; display: block; width: 100%; height: 300px; object-fit: cover; transition: transform 0.4s ease;}
+
+.sansepolcro-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 71, 56, 1);
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.col-md-4 p {
+    max-width: 420px;
+    width: 100%;
+    font-family: Playfair Display, serif;
+    text-align: center;
+    font-size: 17px;
+}
+
+.sansepolcro-item:hover .overlay {opacity: 0.7;}
+
+.sansepolcro-item:hover img {transform: scale(1.05);}
+
+/* GALLERIA IMMAGINI PROGETTI */
+.custom-title { /*sansepolcro e progetti*/
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-primary);
+    max-width: 400px;
+    font-family: Playfair display, serif;
+}
+
+.gallery-item {
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 0; 
+    cursor: pointer;
+    list-style: none;
+    border-radius: 8px;
+}
+.gallery-item img {border-radius: 8px; display: block; width: 100%; height: 190px; object-fit: cover; transition: transform 0.4s ease;}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 71, 56, 1);
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem;
+    pointer-events: none;
+}
+#gallery-item p{
+    max-width: 320px;
+    width: 100%;
+    font-family: Playfair Display, serif;
+    text-align: center;
+    padding-left: 2rem;
+    font-size: 17px;
+}
+
+.gallery-item:hover .overlay {opacity: 0.7;}
+
+.gallery-item:hover img {transform: scale(1.05);}
+
+/* DEFINIZIONE DEL COLORE MARRONE E BEIGE */
+:root {
+    --color-primary: #584738; /* Marrone */
+    --color-text-light: #F1EADA; /* Beige chiaro */
+}
+
+/* 1. Stile Base del Footer */
+footer.bg-primary-color {
+    /* La classe bg-primary-color è già impostata sul marrone #584738 */
+    background-color: var(--color-primary); 
+    padding-top: 50px; /* Aumenta lo spazio sopra il contenuto */
+    padding-bottom: 50px; /* Aumenta lo spazio sotto il contenuto */
+}
+
+/* 2. Stile per il Testo e i Link */
+.text-light-beige {
+    /* Per il Copyright e Privacy/Cookies */
+    color: var(--color-text-light); 
+    font-size: 0.9rem; /* Testo leggermente più piccolo se necessario */
+    font-size: 1.2rem;
+}
+
+.footer-link {
+    /* Per E-mail e Instagram */
+    color: var(--color-text-light); /* Testo beige chiaro */
+    text-decoration: none; /* Rimuovi la sottolineatura */
+    font-size: 1.5rem;
+    transition: color 0.3s ease; /* Aggiungi una transizione per l'hover */
+}
+
+.footer-link:hover {
+    color: #E8D1A7; /* Un beige leggermente più scuro all'hover */
+}
+
+/* ======================================= */
+/* === MEDIA QUERIES PER MOBILE (max-width: 767px) === */
+/* ======================================= */
+
+@media (max-width: 767px) {
+    /* Nascondi eventuali pulsanti Hamburger */
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* Struttura della navigazione: logo SN a sinistra, link a destra */
+    .header-nav {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        align-items: center;
+    }
+    
+    /* Contenitore del logo SN (Mantenuto a sinistra) */
+    .header-nav .col-6:first-child {
+        width: 40%;
+        text-align: left !important; 
+    }
+    
+    /* Contenitore dei link di navigazione (Mantenuto a destra) */
+    .header-nav .col-6.text-end {
+        width: 60%;
+        text-align: right !important; 
+    }
+    
+    /* NAVIGAZIONE AFFIANCATA E FONT RIDOTTO */
+    .main-nav {
+        display: block !important; 
+        text-align: right !important; 
+        position: static;
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .nav-bg .main-nav .nav-link {
+        transition: border-bottom 0.3s ease; /* Manteniamo la transizione solo sul bordo */
+        
+        display: inline-block; 
+        font-size: 0.9rem; 
+        margin-left: 0.3rem; 
+        padding: 5px 0;
+        border-bottom: 2px solid transparent; /* Niente linea di default */
+    }
+    
+    /* *** MODIFICA CRUCIALE: SOLO SOTTOLINEATURA (MARRONE) E NIENTE CAMBIO COLORE *** */
+    .nav-bg .main-nav .nav-link:hover,
+    .nav-bg .main-nav .nav-link:active {
+        /* Forza il colore del testo a rimanere MARRONE (colore primario) */
+        color: var(--color-primary) !important; 
+        
+        /* Aggiunge la sottolineatura MARRONE scuro */
+        border-bottom: 2px solid var(--color-primary) !important; 
+        padding-bottom: 3px; /* Leggero spazio sopra la linea */
+    }
+    
+    /* --- Generale e Sezione About --- */
+    .section-padding {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    #about .about-content {
+        flex-direction: column; 
+    }
+    #about .col-md-6 {
+        width: 100%;
+        text-align: center !important; 
+    }
+    .profile-img {
+        max-width: 90%; 
+        height: 250px; 
+        margin-bottom: 2rem;
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    .about-content .text-col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-content h2, .about-text p {
+        text-align: center !important; 
+        max-width: 100%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* CENTRATURA TITOLI E PARAGRAFI GALLERIE */
+    .custom-title { 
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%; 
+    }
+    
+    /* Paragrafi descrittivi sotto le immagini (Origini e Progetti) */
+    .col-md-4 p, #gallery-item p {
+        padding-left: 0 !important;
+        padding-right: 0 !important; 
+        margin-left: auto; 
+        margin-right: auto; 
+        text-align: center; 
+        max-width: 90%; 
+    }
+    
+    /* --- Footer (Contatti) --- */
+    footer .row .col-md-6 {
+        width: 100%;
+        text-align: center !important;
+    }
+    footer .order-1.order-md-2 {
+        order: 1; 
+        margin-bottom: 1rem !important;
+    }
+    footer .order-2.order-md-1 {
+        order: 2; 
+    }
+    .footer-link {
+        display: inline-block; 
+        margin: 0 10px;
+    }
+    .text-light-beige {
+        text-align: center !important;
+    }
+}
