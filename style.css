@@ -179,8 +179,6 @@ h1, h2, h3, h4 {font-weight: 700;}
 .img-intermedia-grande {
     width: 1360px;
     max-width: 100%; /* Si adatta allo schermo se lo schermo è minore di 1360px */
-    height: 600px;
-    object-fit: cover;
     display: block;
     margin-left: 0;
     margin-right: 0;
